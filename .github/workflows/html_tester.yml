@@ -34,8 +34,11 @@ jobs:
         with: 
           node-version: 18
 
+      - name: htmlhint installer
+        run: npm install -g htmlhint
+
       # Runs a set of commands using the runners shell
-      - name: HTML hint install
+      - name: all HTML test
         run: htmlhint "**/*.html"
 
       - name: End Marker
